@@ -20,7 +20,7 @@ const Nav = () =>{
 		const previous = scrollY.getPrevious();
 		
 	
-		if (latest > previous && latest > parentHeight - 1){
+		if (latest > previous && latest > 3*parentHeight/5){
 			setIsHidden(true);
 		}else{
 			setIsHidden(false);
