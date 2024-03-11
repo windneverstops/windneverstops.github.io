@@ -27,7 +27,7 @@ export default function Home() {
       <div className={`relative flex flex-col lg:items-center items-start h-screen sm:text-5xl text-3xl p-12 ${source_code_pro.className}`}>
         <Nav/>
         <div className="grow flex flex-col justify-around h-auto">
-          <div className="flex flex-col gap-y-4 items-center pt-[150px]">
+          <div className="flex flex-col gap-y-4 items-center pt-16">
             <div className="text-3xl font-bold">
             G&apos;day, I&apos;m
             </div>
