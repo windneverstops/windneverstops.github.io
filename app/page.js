@@ -31,8 +31,8 @@ export default function Home() {
             <div className="text-3xl font-bold">
             G&apos;day, I&apos;m
             </div>
-            <div>
-            <span className="text-4xl text-red-400 pl-7 sm:text-8xl font-bold">Daniel Hong.</span>
+            <div className="text-4xl text-red-400 pl-7 sm:text-8xl font-bold">  
+              Daniel Hong.
             </div>
             <div className="pt-10 text-wrap">
               I&apos;m a penultimate Software Engineering student at a GO8 uni.
