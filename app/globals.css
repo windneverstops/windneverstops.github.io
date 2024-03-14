@@ -2,7 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+.section-title{
+    @apply pt-10 pl-10 pr-10 text-4xl main-font-colour font-bold;
+}
 
+.section-content{
+    @apply p-10 text-justify w-full;
+}
 
+.section{
+    @apply md:flex md:justify-around;
+}
+
+.project{
+    @apply w-full p-6 text-sm md:border-none border-b-2;
+}
+
+.main-font-colour{
+    @apply text-red-600;
+}
+
+.main-ring-colour{
+    @apply ring-red-600;
+}
 
 
