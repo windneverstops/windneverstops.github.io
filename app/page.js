@@ -64,9 +64,9 @@ export default function Home() {
             </div>
             <div className="section-content">
               <p>
-                I'm a penultimate software engineering student at Monash University. I'm interested in all things tech, primarily front-end. I'm open to learning back-end, cloud, dev-ops and AI/ML.
-                I also do enjoy consulting with clients and coming up with effective and tailored solutions - I find it satisfying and rewarding when you're able to connect with a client and sell a story well.
-                I'm looking for opportunities where I can learn new things in an environment that supports life-long learners.
+                I&apos;m a penultimate software engineering student at Monash University. I&apos;m interested in all things tech, primarily front-end. I&apos;m open to learning back-end, cloud, dev-ops and AI/ML.
+                I also do enjoy consulting with clients and coming up with effective and tailored solutions - I find it satisfying and rewarding when you&apos;re able to connect with a client and sell a story well.
+                I&apos;m looking for opportunities where I can learn new things in an environment that supports life-long learners.
               </p>
               <br></br>
               <p>
@@ -125,7 +125,7 @@ export default function Home() {
                 </p>
                 <br/>
                 <p>
-                  This website, after launching is missing a key feature: order of categories is not saved. This is something I'll be fixing soon.
+                  This website, after launching is missing a key feature: order of categories is not saved. This is something I&apos;ll be fixing soon.
                 </p>
               </div>
             </div>
