@@ -1,31 +1,38 @@
 "use client";
 
 import Nav from "@/components/Nav";
-import { Source_Code_Pro } from "next/font/google";
+import { Asap } from "next/font/google";
 import Message from "@/components/Message";
 import MovingShadow from "@/components/MovingShadow";
 
-const source_code_pro = Source_Code_Pro({
+import project1 from "@/public/static/project1.png"
+import project2 from "@/public/static/project2.png"
+import Frame from "@/components/Frame";
+import Pill from "@/components/Pill";
+
+const mainFont = Asap({
   subsets: ["latin"],
 })
 
 
 export default function Home() {
 
+
+
   return (
-    <main className="h-screen">
-      <div className={`relative flex flex-col lg:items-center items-start h-screen sm:text-5xl text-3xl p-12 ${source_code_pro.className}`}>
+    <main className={`h-screen w-screen ${mainFont.className}`} style={{}}>
+      <div style={{}} className="relative flex flex-col lg:items-center items-start h-screen p-12">
         <Nav/>
-        <div className="grow flex flex-col justify-around h-auto">
-          <div className="flex flex-col gap-y-4 items-center pt-16">
+        <div className="grow flex flex-col justify-around w-full h-auto">
+          <div className="flex flex-col gap-y-4 items-center pt-14">
             <div className="text-3xl font-bold">
             G&apos;day, I&apos;m
             </div>
-            <div className="text-4xl text-red-400 pl-7 sm:text-8xl font-bold">  
+            <span className="text-3xl main-font-colour pl-7 sm:text-5xl font-bold overflow-visible text-nowrap">  
               Daniel Hong.
-            </div>
+            </span>
             <div className="pt-10 text-wrap">
-              I&apos;m a penultimate Software Engineering student at a GO8 uni.
+              I&apos;m a <u className="decoration-sky-600">penultimate Software Engineering student</u> at a GO8 uni.
             </div> 
           </div>
           <div className="flex flex-col items-center gap-y-12">
@@ -50,9 +57,97 @@ export default function Home() {
           
         </div>
       </div>
-      <div className="static h-screen">
-        Content to be filled
-      </div>
+      <section>
+        <div className="section">
+            <div className="section-title">
+              About
+            </div>
+            <div className="section-content">
+              <p>
+                I'm a penultimate software engineering student at Monash University. I'm interested in all things tech, primarily front-end. I'm open to learning back-end, cloud, dev-ops and AI/ML.
+                I also do enjoy consulting with clients and coming up with effective and tailored solutions - I find it satisfying and rewarding when you're able to connect with a client and sell a story well.
+                I'm looking for opportunities where I can learn new things in an environment that supports life-long learners.
+              </p>
+              <br></br>
+              <p>
+                In my spare time, I like to collect watches (I currently own an Orient Bambino open heart), play fingerstyle guitar, hike in the Victorian outback, gym and consume anything of the sci-fi genre.
+              </p>
+            </div>
+        </div>
+      </section>
+      <section>
+        <div className="section">
+            <div className="section-title">
+              Projects
+            </div>
+            <div className="section-content grid sm:grid-cols-2">
+              <div className="project">
+                <Frame image={project1} width={400} height={400} alt="Screenshot of project 1"/>
+                <div className="flex flex-row p-4 flex-wrap gap-2">
+                  <Pill>Next.js</Pill>
+                  <Pill>Tailwind.css</Pill>
+                  <Pill>Tailwind.css</Pill>
+                  <Pill>Tailwind.css</Pill>
+                </div>
+                <p>
+                  Showcases my projects and experiences.
+                </p>
+                <br/>
+                <p>
+                  Purpose:
+                </p>
+                <br/>
+                <p>
+                  To be a creative outlet where I can display my resume in a non-restrictive format, enabling me to expound on my experiences, projects, and myself.
+                  Additionally, this serves as a pleasant excuse for me to learn framer.js, as well as to further my skills learning react hooks and tailwind.
+                </p>
+              </div>
+              <div className="project">
+              <Frame image={project2} width={500} height={500} alt="Screenshot of project 1"/>       
+                <p>
+                  A minimalist kanban board which utilises local storage to persist data.
+                </p>
+                <br/>
+                <p>
+                  Purpose:
+                </p>
+                <br/>
+                <p>
+                  Something I struggled with a lot in the holidays was focussing on getting work done, whether that be leetcode or even coding this website up.
+                  After some reflection, I realised it was because I did not set any immediate goals. By this point I had used Asana and similar products before, however
+                  those products felt annoying to use especially for planning simple goals because there were so many unnecessary features and gimmicks. You had to sign-in, 
+                  navigate around with so many irrelevant (for my use-case) features. Hence, I created this website so that I could simply go onto the website,
+                  and start planning my goals immediately.
+                </p>
+                <br/>
+                <p>
+                  Note:
+                </p>
+                <br/>
+                <p>
+                  This website, after launching is missing a key feature: order of categories is not saved. This is something I'll be fixing soon.
+                </p>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section>
+        <div className="section">
+            <div className="section-title">
+              Experiences
+            </div>
+            <div className="section-content">
+              
+            </div>
+        </div>
+      </section>
+      <footer>
+        <div className="w-full flex justify-center p-4">
+          <p>
+            Created by Daniel Hong using next.js and tailwind.css
+          </p>
+        </div>
+      </footer>
       <Message message={"This website is currently under construction! Check back soon."}/>
     </main>
   );
