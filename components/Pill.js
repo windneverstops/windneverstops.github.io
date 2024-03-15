@@ -1,6 +1,6 @@
-const Pill = ({children}) =>{
+const Pill = ({children, style}) =>{
     return (
-        <div className="border p-2 bg-red-600 rounded-full text-white">
+        <div className="border p-2 rounded-full" style = {style}>
             {children}
         </div>
     )
