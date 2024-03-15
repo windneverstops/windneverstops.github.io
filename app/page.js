@@ -84,10 +84,10 @@ export default function Home() {
               <div className="project">
                 <Frame image={project1} width={400} height={400} alt="Screenshot of project 1"/>
                 <div className="flex flex-row p-4 flex-wrap gap-2">
-                  <Pill>Next.js</Pill>
+                  <Pill>React.js</Pill>
                   <Pill>Tailwind.css</Pill>
-                  <Pill>Tailwind.css</Pill>
-                  <Pill>Tailwind.css</Pill>
+                  <Pill>Vercel</Pill>
+                  <Pill>JavaScript</Pill>
                 </div>
                 <p>
                   Showcases my projects and experiences.
@@ -104,6 +104,13 @@ export default function Home() {
               </div>
               <div className="project">
               <Frame image={project2} width={500} height={500} alt="Screenshot of project 1"/>       
+                <div className="flex flex-row p-4 flex-wrap gap-2">
+                  <Pill>React.js</Pill>
+                  <Pill>Tailwind.css</Pill>
+                  <Pill>Local Storage</Pill>
+                  <Pill>Vercel</Pill>
+                  <Pill>JavaScript</Pill>
+                </div>
                 <p>
                   A minimalist kanban board which utilises local storage to persist data.
                 </p>
@@ -137,7 +144,7 @@ export default function Home() {
               Experiences
             </div>
             <div className="section-content">
-              
+              Information to come.
             </div>
         </div>
       </section>
