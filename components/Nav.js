@@ -1,48 +1,19 @@
 "use client";
-import { useScroll, useMotionValueEvent, motion } from "framer-motion";
-import {useEffect, useState, useRef } from "react";
+import { useScroll, motion } from "framer-motion";
 import MovingShadow from "./MovingShadow";
 
 
 const Nav = () =>{
 
-	const navRef = useRef(null);
-	const { scrollY } = useScroll();
-	const [isHidden, setIsHidden] = useState(false);
-	const [parentHeight, setParentHeight] = useState(0);
 
-	useEffect(() => {
-		setParentHeight(navRef.current.parentNode.offsetHeight)
-	})
-	
-
-	useMotionValueEvent(scrollY, "change", (latest) => {
-		const previous = scrollY.getPrevious();
-		
-	
-		if (latest > previous && latest > 3*parentHeight/5){
-			setIsHidden(true);
-		}else{
-			setIsHidden(false);
-		}
-	});
-
+	const { scrollYProgress} = useScroll();
+	console.log(scrollYProgress)
 
 	return (
-		<motion.nav
-			variants={{
-				visible:{y:0},
-				hidden:{y:"-100%"}
-			}}
-	
-			transition={{duration: 0.15, ease:"easeInOut"}}
-			className="w-screen  fixed top-0 left-0 h-16 px-8 text-2xl flex flex-row justify-between items-center"
-			ref={navRef}
-			id="sda"
-		>
-				<div className="flex">
-				
-				</div>
+		<div className="w-full justify-center flex">
+			<nav
+			className="w-full fixed top-0 left-0 h-16 px-8 text-2xl flex justify-end items-center"
+			>
 				<div className="flex row gap-x-4 pr-4">
 					<MovingShadow>
 					<a href="https://linkedin.com/in/danielhhong" target="_blank" className="main-font-colour"><svg width="30" height="30" viewBox="0 0 15 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M2 1C1.44772 1 1 1.44772 1 2V13C1 13.5523 1.44772 14 2 14H13C13.5523 14 14 13.5523 14 13V2C14 1.44772 13.5523 1 13 1H2ZM3.05 6H4.95V12H3.05V6ZM5.075 4.005C5.075 4.59871 4.59371 5.08 4 5.08C3.4063 5.08 2.925 4.59871 2.925 4.005C2.925 3.41129 3.4063 2.93 4 2.93C4.59371 2.93 5.075 3.41129 5.075 4.005ZM12 8.35713C12 6.55208 10.8334 5.85033 9.67449 5.85033C9.29502 5.83163 8.91721 5.91119 8.57874 6.08107C8.32172 6.21007 8.05265 6.50523 7.84516 7.01853H7.79179V6.00044H6V12.0047H7.90616V8.8112C7.8786 8.48413 7.98327 8.06142 8.19741 7.80987C8.41156 7.55832 8.71789 7.49825 8.95015 7.46774H9.02258C9.62874 7.46774 10.0786 7.84301 10.0786 8.78868V12.0047H11.9847L12 8.35713Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd"></path></svg></a>
@@ -53,12 +24,20 @@ const Nav = () =>{
 					<MovingShadow>
 					<a href="mailto:business.danielhong@gmail.com" target="_blank" className="main-font-colour"><svg width="30" height="30" viewBox="0 0 15 15" fill="noneColor" xmlns="http://www.w3.org/2000/svg"><path d="M1 2C0.447715 2 0 2.44772 0 3V12C0 12.5523 0.447715 13 1 13H14C14.5523 13 15 12.5523 15 12V3C15 2.44772 14.5523 2 14 2H1ZM1 3L14 3V3.92494C13.9174 3.92486 13.8338 3.94751 13.7589 3.99505L7.5 7.96703L1.24112 3.99505C1.16621 3.94751 1.0826 3.92486 1 3.92494V3ZM1 4.90797V12H14V4.90797L7.74112 8.87995C7.59394 8.97335 7.40606 8.97335 7.25888 8.87995L1 4.90797Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd"></path></svg></a>
 					</MovingShadow>
-					
-				
-				
 				</div>
 		
-		</motion.nav>
+			</nav>
+			<nav
+				className="w-full fixed top-0"
+			>
+				<motion.div className="bg-red-600 h-1.5"
+					style = {{scaleX: scrollYProgress}}
+				/>
+	
+			</nav>
+
+		</div>
+		
 	)
 }
 export default Nav

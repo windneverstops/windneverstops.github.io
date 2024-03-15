@@ -5,11 +5,12 @@ import { Asap } from "next/font/google";
 import Message from "@/components/Message";
 import MovingShadow from "@/components/MovingShadow";
 
-import project1 from "@/public/static/project1.png"
-import project2 from "@/public/static/project2.png"
-import Frame from "@/components/Frame";
-import Pill from "@/components/Pill";
+import exportPhotos from "@/public/static/exportPhotos";
 
+import ScrollJumper from "@/components/ScrollJumper";
+import Project from "@/components/content/Project";
+import AboutContent from "@/components/content/AboutContent";
+import { pillType } from "@/scripts/pillManager";
 const mainFont = Asap({
   subsets: ["latin"],
 })
@@ -17,21 +18,19 @@ const mainFont = Asap({
 
 export default function Home() {
 
-
-
   return (
     <main className={`h-screen mx-auto max-w-screen-xl ${mainFont.className}`} style={{}}>
-      <div style={{}} className="relative flex flex-col lg:items-center items-start h-screen p-12">
+      <div style={{}} className="relative flex flex-col h-screen p-12">
         <Nav/>
         <div className="grow flex flex-col justify-around w-full h-auto">
           <div className="flex flex-col gap-y-4 items-center pt-14">
             <div className="text-3xl font-bold">
             G&apos;day, I&apos;m
             </div>
-            <span className="text-3xl main-font-colour pl-7 sm:text-5xl font-bold overflow-visible text-nowrap">  
+            <span className="main-font-colour pl-7 text-5xl font-bold overflow-visible text-nowrap">  
               Daniel Hong.
             </span>
-            <div className="pt-10 text-wrap">
+            <div className="pt-10 text-wrap text-xl">
               I&apos;m a <u className="decoration-sky-600">penultimate Software Engineering student</u> at a GO8 uni.
             </div> 
           </div>
@@ -45,35 +44,20 @@ export default function Home() {
                 </MovingShadow>
               </a>
             </div>
-            <div className=" w-full flex justify-center animate-bounce">
-              <div className="flex flex-col">
-                <svg  width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd"></path></svg>
-                <svg  width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd"></path></svg>
-                <svg  width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd"></path></svg>
-                <svg  width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd"></path></svg>
-              </div>
+            <div className="w-full flex justify-center">
+              <ScrollJumper/>
             </div>
           </div>
           
         </div>
       </div>
       <section>
-        <div className="section">
-            <div className="section-title">
-              About
-            </div>
-            <div className="section-content">
-              <p>
-                I&apos;m a penultimate software engineering student at Monash University. I&apos;m interested in all things tech, primarily front-end. I&apos;m open to learning back-end, cloud, dev-ops and AI/ML.
-                I also do enjoy consulting with clients and coming up with effective and tailored solutions - I find it satisfying and rewarding when you&apos;re able to connect with a client and sell a story well.
-                I&apos;m looking for opportunities where I can learn new things in an environment that supports life-long learners.
-              </p>
-              <br></br>
-              <p>
-                In my spare time, I like to collect watches (I currently own an Orient Bambino open heart), play fingerstyle guitar, hike in the Victorian outback, gym and consume anything of the sci-fi genre.
-              </p>
-            </div>
-        </div>
+        <AboutContent
+          title = {"About"}
+          content = {[`I'm a penultimate software engineering student at Monash University. I'm interested in all things tech, primarily front-end. I'm open to learning back-end, cloud, dev-ops and AI/ML.
+          I also do enjoy consulting with clients and coming up with effective and tailored solutions - I find it satisfying and rewarding when you're able to connect with a client and sell a story well.
+          I'm looking for opportunities where I can learn new things in an environment that supports life-long learners.`, `In my spare time, I like to collect watches (I currently own an Orient Bambino open heart), play fingerstyle guitar, hike in the Victorian outback, gym and consume anything of the sci-fi genre.`]}
+        />
       </section>
       <section>
         <div className="section">
@@ -81,60 +65,78 @@ export default function Home() {
               Projects
             </div>
             <div className="section-content grid sm:grid-cols-2">
-              <div className="project">
-                <Frame image={project1} width={400} height={400} alt="Screenshot of project 1"/>
-                <div className="flex flex-row p-4 flex-wrap gap-2">
-                  <Pill>React.js</Pill>
-                  <Pill>Tailwind.css</Pill>
-                  <Pill>Vercel</Pill>
-                  <Pill>JavaScript</Pill>
-                </div>
-                <p>
-                  Showcases my projects and experiences.
-                </p>
-                <br/>
-                <p>
-                  Purpose:
-                </p>
-                <br/>
-                <p>
-                  To be a creative outlet where I can display my resume in a non-restrictive format, enabling me to expound on my experiences, projects, and myself.
-                  Additionally, this serves as a pleasant excuse for me to learn framer.js, as well as to further my skills learning react hooks and tailwind.
-                </p>
-              </div>
-              <div className="project">
-              <Frame image={project2} width={500} height={500} alt="Screenshot of project 1"/>       
-                <div className="flex flex-row p-4 flex-wrap gap-2">
-                  <Pill>React.js</Pill>
-                  <Pill>Tailwind.css</Pill>
-                  <Pill>Local Storage</Pill>
-                  <Pill>Vercel</Pill>
-                  <Pill>JavaScript</Pill>
-                </div>
-                <p>
-                  A minimalist kanban board which utilises local storage to persist data.
-                </p>
-                <br/>
-                <p>
-                  Purpose:
-                </p>
-                <br/>
-                <p>
-                  Something I struggled with a lot in the holidays was focussing on getting work done, whether that be leetcode or even coding this website up.
+              <Project
+                image = {exportPhotos.project1}
+                width = {"auto"}
+                height = {"auto"}
+                alt="Screenshot of portfolio website"
+                pills = {[pillType.React,pillType.Tailwind,pillType.JavaScript,pillType.Vercel]}
+                content = {["Showcases my projects and experiences.", "To be a creative outlet where I can display my resume in a non-restrictive format, enabling me to expound on my experiences, projects, and myself. Additionally, this serves as a pleasant excuse for me to learn framer.js, as well as to further my skills learning react hooks and tailwind."]}
+              />
+              <Project
+                image={exportPhotos.project2} 
+                width={"auto"} 
+                height={"auto"} 
+                alt="Screenshot of simplistic kanban board"
+                pills={[pillType.React, pillType.Tailwind, pillType.JavaScript, pillType.Vercel, pillType.LocalStorage]}
+                content = {["A minimalist kanban board which utilises local storage to persist data.", "Purpose:",   
+                  `Something I struggled with a lot in the holidays was focussing on getting work done, whether that be leetcode or even coding this website up.
                   After some reflection, I realised it was because I did not set any immediate goals. By this point I had used Asana and similar products before, however
                   those products felt annoying to use especially for planning simple goals because there were so many unnecessary features and gimmicks. You had to sign-in, 
                   navigate around with so many irrelevant (for my use-case) features. Hence, I created this website so that I could simply go onto the website,
-                  and start planning my goals immediately.
-                </p>
-                <br/>
-                <p>
-                  Note:
-                </p>
-                <br/>
-                <p>
-                  This website, after launching is missing a key feature: order of categories is not saved. This is something I&apos;ll be fixing soon.
-                </p>
-              </div>
+                  and start planning my goals immediately.`, "Note:", "This website, after launching is missing a key feature: order of categories is not saved. This is something I'll be fixing soon."
+              ]}
+              />
+              <Project
+                image = {exportPhotos.project3}
+                width = {"auto"}
+                height = {"auto"}
+                alt="Screenshot of discord python bot"
+                pills = {[pillType.Python, pillType.GoogleCloud, pillType.MicrosoftAzure, pillType.MySql]}
+                content = {["A discord bot which manages meet ups.", "Purpose:", `The problem with catching up with my mates using
+                  discord was that it was very easy to have information displaced everywhere, in between chats and memes. This lead to issues
+                  where multiple people would ask similar questions which could have been answered by scrolling up. This bot was created to address that problem.`,'Note:', "This project has been put on hold due to Azure credits running out and the Google Cloud free trial running out."]}
+              />
+              <Project
+                image = {exportPhotos.project4}
+                width = {"auto"}
+                height = {"340"}
+                alt="Screenshot of the chrome extensions"
+                pills = {[pillType.JavaScript]}
+                content = {["Theage extension which lets you view articles for free.", "Purpose:", "Originally, theage.com.au, had a 3 article limit per month. Turns out, they tracked this via local storage. So this clear outs local storage automatically and removes the annoying 'You have 3 free articles remaining' pop up",
+                  "Note:", `Even though this project had <10 lines of code, this is by far my most favourite. I've always been someone who has enjoyed reading articles in theage.com.au. Eventually, I learnt that you could circumvent the tracker by deleting the website cookies. However, that was really annoying to deal with as it required
+                  constant website refreshing as well as clicking a few buttons to clear the cookies. I thought that there should have been an easier way - so I dug around, realised they stored information in the local storage. So I cleared it to see what happened - and voila! IT NO LONGER TRACKED THE WEBSITES!!
+                  It was an absolutely euphoric moment, and solidified my certainty regarding swapping from civil engineering to software engineering.
+                  `
+                ]}
+              />
+              <Project
+                image = {exportPhotos.project5}
+                width = {"auto"}
+                height = {"340"}
+                alt="Screenshot of Commute Ease, our submission to Unihack "
+                pills = {[pillType.React, , pillType.TypeScript, pillType.Tailwind, pillType.Python, pillType.Django, pillType.MySql]}
+                content = {["Our Unihack submission. We attempted to create an app which took public transport data, and displayed that in a way where all you had to do was to look at the dashboard, and you would know immediately what to do to get to your next location, which you would preset.", "Purpose:",
+                  `The purpose was to help solve every public transport commuter's worse nightmare: being late due to not knowing the most optimal path to your next location because PTV decided to can all trains from Glen Waverley for no apparent reason at all. This app ensures that you get to your
+                  desired location most optimally given the circumstances.`, "Note: ", "Although, we did not produce a final working product, I learnt a lot of things:", "First, the importance of regularly communicating. Some team members would complete work, and then keep silent until someone asked about its status. This is obviously an issue as it creates inefficiencies.",
+                  `Secondly, the importance of planning out the structure of the app. As primarily a front-end developer, I did not have much experience working with connecting backend endpoints to frontend (my next projects will aim to utilise APIs, probably the Apex legends API).
+                  Through this experience, I learnt the importance of defining how the backend was to communicate with the frontend - whether that be using fetch, post, put or by using sockets, as well as defining the data structures transferred between the front and back end. In the end, 
+                  not knowing this caused us to stumble greatly when it came time to connect the frontend to the backend. In the future, I will make sure to define how communication works so that integration is simple.
+                  `
+                ]}
+              />
+              <Project
+                image = {exportPhotos.project6}
+                width = {"auto"}
+                height = {"auto"}
+                alt="Screenshot of the user interface"
+                pills = {[pillType.JavaScript, pillType.Bootstrap]}
+                content = {["User management interface made for FIT1056 - 'Collaborative Engineering for Web Applications'. I achieved perfect marks and the highest grade in the cohort for this unit.", "Note:", `This was my first software engineering unit after deciding that I wanted to pursue
+                software engineering. Although this project is mundane and from university, it's the project that got me started to where I am today - the very website you're reading this on. It's something I'm proud of and nostalgic about.
+                `       
+                ]}
+              />
+              
             </div>
         </div>
       </section>
@@ -148,6 +150,8 @@ export default function Home() {
             </div>
         </div>
       </section>
+      <div className="h-screen"></div>
+      <div className="h-screen"></div>
       <footer>
         <div className="w-full flex justify-center p-4">
           <p>

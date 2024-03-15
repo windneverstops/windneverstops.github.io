@@ -11,11 +11,11 @@
 }
 
 .section{
-    @apply md:flex md:justify-around;
+    @apply md:flex md:justify-around text-xl;
 }
 
 .project{
-    @apply w-full p-6 text-sm md:border-none border-b-2;
+    @apply w-full p-6 text-sm md:border-none border-b-2 text-xl;
 }
 
 .main-font-colour{
