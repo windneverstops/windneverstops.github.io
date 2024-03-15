@@ -20,7 +20,7 @@ export default function Home() {
 
 
   return (
-    <main className={`h-screen w-screen ${mainFont.className}`} style={{}}>
+    <main className={`h-screen mx-auto max-w-screen-xl ${mainFont.className}`} style={{}}>
       <div style={{}} className="relative flex flex-col lg:items-center items-start h-screen p-12">
         <Nav/>
         <div className="grow flex flex-col justify-around w-full h-auto">
