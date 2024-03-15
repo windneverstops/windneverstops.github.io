@@ -25,13 +25,13 @@ export default function Home() {
         <div className="grow flex flex-col justify-around w-full h-auto">
           <div className="flex flex-col gap-y-4 items-center pt-14">
             <div className="text-3xl font-bold">
-            G'day, I'm
+            G&apos;day, I&apos;m
             </div>
             <span className="main-font-colour pl-7 text-5xl font-bold overflow-visible text-nowrap">  
               Daniel Hong.
             </span>
             <div className="pt-10 text-wrap text-xl">
-              I'm a <u className="decoration-sky-600">penultimate Software Engineering student</u> at a GO8 uni.
+              I&apos;m a <u className="decoration-sky-600">penultimate Software Engineering student</u> at a GO8 uni.
             </div> 
           </div>
           <div className="flex flex-col items-center gap-y-12">
