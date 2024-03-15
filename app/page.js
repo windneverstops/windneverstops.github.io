@@ -71,7 +71,10 @@ export default function Home() {
                 height = {"auto"}
                 alt="Screenshot of portfolio website"
                 pills = {[pillType.React,pillType.Tailwind,pillType.JavaScript,pillType.Vercel]}
-                content = {["Showcases my projects and experiences.", "To be a creative outlet where I can display my resume in a non-restrictive format, enabling me to expound on my experiences, projects, and myself. Additionally, this serves as a pleasant excuse for me to learn framer.js, as well as to further my skills learning react hooks and tailwind."]}
+                content = {["Showcases my projects and experiences.", 
+                "To be a creative outlet where I can display my resume in a non-restrictive format, enabling me to expound on my experiences, projects, and myself. Additionally, this serves as a pleasant excuse for me to learn framer.js, as well as to further my skills learning react hooks and tailwind."
+                , "Note: ", "This website is still under construction." 
+              ]}
               />
               <Project
                 image={exportPhotos.project2} 
