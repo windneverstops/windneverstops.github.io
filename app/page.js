@@ -75,7 +75,6 @@ export default function Home() {
                 width = {"auto"}
                 height = {"auto"}
                 alt="Screenshot of portfolio website"
-                pills = {[pillType.React,pillType.Tailwind,pillType.JavaScript,pillType.Vercel]}
                 content = {["Purpose:", "To be a creative outlet where I can display my resume in a non-restrictive format, enabling me to expound on my experiences, projects, and myself. Additionally, this serves as a pleasant excuse for me to learn framer.js, as well as to further my skills learning react hooks and tailwind."]}
                 title = {"Portfolio Website showcasing my projects and experiences."}
               />
