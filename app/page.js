@@ -61,7 +61,7 @@ export default function Home() {
           title = {"About"}
           content = {[`I'm a penultimate software engineering student at Monash University. I'm interested in all things tech, primarily front-end. I'd also love to learn back-end, cloud, dev-ops and AI/ML.
           I also do enjoy consulting with clients and coming up with effective and tailored solutions - I find it satisfying and rewarding when you're able to connect with a client and sell a story well.
-          I'm looking for opportunities where I can learn new things in an environment that supports life-long learners.`, `In my spare time, I like to collect watches (I currently own an Orient Bambino open heart), play fingerstyle guitar, hike in the Victorian outback, gym and consume anything of the sci-fi genre.`]}
+          I'm looking for opportunities where I can learn new things in an environment that supports life-long learners.`, `In my spare time, I like to collect watches (I currently own an Orient Bambino open heart), play fingerstyle guitar, hike in the Victorian outback, gym, consume anything of the sci-fi genre, and solve challenging leetcode questions.`]}
         />
       </section>
       <section>
@@ -75,6 +75,7 @@ export default function Home() {
                 width = {"auto"}
                 height = {"auto"}
                 alt="Screenshot of portfolio website"
+                pills = {[pillType.React,pillType.Tailwind,pillType.JavaScript,pillType.Vercel]}
                 content = {["Purpose:", "To be a creative outlet where I can display my resume in a non-restrictive format, enabling me to expound on my experiences, projects, and myself. Additionally, this serves as a pleasant excuse for me to learn framer.js, as well as to further my skills learning react hooks and tailwind."]}
                 title = {"Portfolio Website showcasing my projects and experiences."}
               />
