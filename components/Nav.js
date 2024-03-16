@@ -7,7 +7,6 @@ const Nav = () =>{
 
 
 	const { scrollYProgress} = useScroll();
-	console.log(scrollYProgress)
 
 	return (
 		<div className="w-full justify-center flex">
@@ -27,14 +26,16 @@ const Nav = () =>{
 				</div>
 		
 			</nav>
-			<nav
-				className="w-full fixed top-0"
-			>
+			<div className="w-full fixed top-0">
 				<motion.div className="bg-red-600 h-1.5"
-					style = {{scaleX: scrollYProgress}}
+					style = {{scaleX: scrollYProgress , transformOrigin: 'left' }}
 				/>
+			</div>
+			
+			
+				
 	
-			</nav>
+		
 
 		</div>
 		

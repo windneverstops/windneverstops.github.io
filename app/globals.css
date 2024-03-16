@@ -1,21 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+ 
+
 
 .section-title{
     @apply pt-10 pl-10 pr-10 text-4xl main-font-colour font-bold;
 }
 
 .section-content{
-    @apply p-10 text-justify w-full;
+    @apply text-justify w-full;
 }
 
 .section{
-    @apply md:flex md:justify-around text-xl;
+    @apply p-6 md:flex md:justify-around;
 }
 
 .project{
-    @apply w-full p-6 text-sm md:border-none border-b-2 text-xl;
+    @apply w-full p-4 text-sm md:border-none border-b-2 text-base;
 }
 
 .main-font-colour{
