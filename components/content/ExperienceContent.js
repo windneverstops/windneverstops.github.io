@@ -6,13 +6,13 @@ const ExperienceContent = ({positionName, dates, content}) => {
         <div>{positionName}</div>
         <div className="sm:text-right">{dates}</div>
       </div>
-      <div className="indent-8">
+      <div>
         {
           content.map((description, index) => {
             return <React.Fragment key={index}>
-              <li>
-                {description}
-              </li>
+           
+              {description}
+             
           
             </React.Fragment>
           })
