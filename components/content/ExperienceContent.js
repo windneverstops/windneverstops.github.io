@@ -12,9 +12,11 @@ const ExperienceContent = ({positionName, company, dates, content}) => {
         {
           content.map((description, index) => {
             return <React.Fragment key={index}>
-           
-              {description}
-             
+              <p className="whitespace-pre-line">
+                {description}
+              </p>
+              
+
           
             </React.Fragment>
           })
