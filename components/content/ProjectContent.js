@@ -37,7 +37,7 @@ const ProjectContent = ({ image, width, height, alt, content, pills, title }) =>
       }} ref={frameRef} onClick={handleModalTrigger}>
         <Frame image={image} width={width} height={height} alt={alt}/>
       </div>
-      
+      <div className="grow"></div>
       <div className="flex flex-row py-4 flex-wrap gap-2" ref={pillRef}>
         {
           pills.map((pill, value) => {
@@ -69,7 +69,6 @@ const ProjectContent = ({ image, width, height, alt, content, pills, title }) =>
           {title}
         </div>
       </div>
-      <div className="grow"/>
       <Dialog>
       <DialogTrigger ref={modalTriggerRef}></DialogTrigger>
         <DialogContent className="bg-white overflow-y-scroll max-h-[90%]">

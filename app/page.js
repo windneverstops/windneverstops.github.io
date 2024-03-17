@@ -157,23 +157,23 @@ export default function Home() {
               Experiences
             </div>
             <div className="section-content pt-4">
-              <ExperienceContent positionName={"VCE math tutor @ self-employed"} dates={"Dec 2020 - Present"}
+              <ExperienceContent positionName={"VCE Math Tutor"} company={"Double Check Tutoring and Daniel Hong Tutoring Services"} dates={"Dec 2020 - Present"}
               content={["Collaborated with and mentored 10+ students to achieve desired academic outcome.",
               "Analysed skills of students to produce individualized lessons, adapting to different needs of students.",
               "Assisted 100% of the students to successfully achieve academic goals."]}/>
-              <ExperienceContent positionName={"Sponsorship Officer @ Wired Monash"} dates={"Sept 2022 - Present"}
+              <ExperienceContent positionName={"Sponsorship Officer"} company={"Wired Monash"} dates={"Sep 2022 - Present"}
               content={["Liaised with industry representatives, in both a written and verbal format, demonstrating strong verbal communication skills.",
               "Built 5 industry relationships with the club.",
               "Cultivated the relationship with Wired’s largest sponsor for 2023, KPMG.",
               "Grew the club from a club about to be deregistered to the largest club at Monash within a space of a year with 1200 members for 2023. ",
               "Organised and planned Wired’s first industry night in several years with over 500 attendees."]}/>
-              <ExperienceContent positionName={"Kids Church and Epic Youth Leader @ CityLife Church"} dates={"Jan 2015 - Jan 2023"}
+              <ExperienceContent positionName={"Kids Church and Epic Youth Leader"} company={"Citylife Church"} dates={"Jan 2015 - Jan 2023"}
               content={["Chaperoned and mentored over 100 cumulative school aged kids, from prep to grade 8.",
               "Lead 5+ life groups and presented to children and adults.",
               "Collaborated with many teams, sharing and giving input and feedback on how the session was to run."]}/>
-              <ExperienceContent positionName={"Winter Fellow @ Startmate"} dates={"Winter 2022"}
+              <ExperienceContent positionName={"Winter Fellow"} company={"Startmate"} dates={"Winter 2022"}
               content={["Learnt about the start-up industry and networked with founders, investors and students."]}/>
-              <ExperienceContent positionName={"Customer Service Member @ KFC"} dates={"Feb 2018 - Jan 2019"}
+              <ExperienceContent positionName={"Customer Service Member"} company={"KFC"} dates={"Feb 2018 - Jan 2019"}
               content={["Exceeded KPIs in a fast-paced and stressful environment.", "Placated irritated customers.", "Communicated effectively with colleagues under stress."]}/>
                    
             </div>
