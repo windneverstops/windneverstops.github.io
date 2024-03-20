@@ -11,7 +11,7 @@ const Appear = ({children, delay = 0, duration = 0.5}) => {
                 style={{
                     transform: ifElementIsInView ? "none" : "translateY(15px)",
                     opacity: ifElementIsInView ? 1 : 0,
-                    transition: `0.4s linear ${duration + delay}s `
+                    transition: `0.4s linear ${duration + delay - 0.3 >=0 ? duration + delay - 0.3 : 0.2}s `
                 }}
             >
                 {children}
@@ -20,7 +20,7 @@ const Appear = ({children, delay = 0, duration = 0.5}) => {
                 style={{
                     scaleX: ifElementIsInView ? 0 : 1,
                     transformOrigin: 'right',
-                    transition: `${duration}s cubic-bezier(.18,.94,.78,.57) ${delay}s`
+                    transition: `${duration}s linear ${delay}s`
                 }}
             >   
             </motion.div>
