@@ -34,17 +34,17 @@ export default function Home() {
 
             </div>
             <span className="main-font-colour pl-7 text-5xl font-bold overflow-visible text-nowrap">
-              <Appear>
+              <Appear delay={0.1}>
                 Daniel Hong.
               </Appear>
             </span>
             <div className="pt-10 text-wrap text-xl">
-              <Appear>
+              <Appear delay={0.2}>
                 I&apos;m a <u className="decoration-sky-600">penultimate Software Engineering student</u> at a GO8 uni.
               </Appear>
             </div>
             <div className="text-sm">
-              <Appear>
+              <Appear delay={0.3}>
                 To experience all the cool animations, please use a computer.
               </Appear>
             </div>

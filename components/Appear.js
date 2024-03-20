@@ -1,10 +1,9 @@
-import { useInView } from "framer-motion";
+import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
 
-const Appear = ({children}) => {
+const Appear = ({children, delay = 0, duration = 0.5}) => {
     const appearRef = useRef(null);
     const ifElementIsInView = useInView(appearRef, {once: true})
-
     
     return (
         <div  ref = {appearRef} className="grid grid-rows-1 grid-cols-1 relative">
@@ -12,20 +11,19 @@ const Appear = ({children}) => {
                 style={{
                     transform: ifElementIsInView ? "none" : "translateY(15px)",
                     opacity: ifElementIsInView ? 1 : 0,
-                    transition: "0.3s linear 0.2s"
+                    transition: `0.4s linear ${duration + delay}s `
                 }}
             >
                 {children}
             </div>
-            <div className="z-0 h-full w-full row-start-1 col-start-1 bg-red-600"
+            <motion.div className="z-0 h-full w-full row-start-1 col-start-1 bg-red-600"
                 style={{
-                    transform: ifElementIsInView ? "translateY(-15px)" : "none",
-                    opacity: ifElementIsInView ? 0 : 1,
-                    transition: "0.1s cubic-bezier(.18,.94,.78,.57)"
+                    scaleX: ifElementIsInView ? 0 : 1,
+                    transformOrigin: 'right',
+                    transition: `${duration}s cubic-bezier(.18,.94,.78,.57) ${delay}s`
                 }}
-            >
-                
-            </div>
+            >   
+            </motion.div>
            
             
         </div>
