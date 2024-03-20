@@ -4,6 +4,7 @@ import { useInView} from "framer-motion"
 import { useRef} from "react"
 import Pills from "@/scripts/pillManager"
 import Image from "next/image"
+import LinksForProject from "../LinksForProject"
 
 import {
   Dialog,
@@ -14,7 +15,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 
-const ProjectContent = ({ image, width, height, alt, content, pills, title }) => {
+const ProjectContent = ({ image, width, height, alt, content, pills, title, link, repo }) => {
   const frameRef = useRef(null)
   const contentRefForAnimations = useRef(null)
   const contentRef = useRef(null)
@@ -39,6 +40,7 @@ const ProjectContent = ({ image, width, height, alt, content, pills, title }) =>
       </div>
       <div className="grow"></div>
       <div className="flex flex-row py-4 flex-wrap gap-2" ref={pillRef}>
+        <LinksForProject link = {link} repo = {repo}/>
         {
           pills.map((pill, value) => {
             const style={
