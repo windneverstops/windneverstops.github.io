@@ -91,6 +91,8 @@ export default function Home() {
               pills={[pillType.React, pillType.Tailwind, pillType.JavaScript, pillType.Vercel]}
               content={["Purpose:", "To be a creative outlet where I can display my resume in a non-restrictive format, enabling me to expound on my experiences, projects, and myself. Additionally, this serves as a pleasant excuse for me to learn framer.js, as well as to further my skills learning react hooks and tailwind."]}
               title={"Portfolio Website showcasing my projects and experiences."}
+              link={"https://danielhong.dev"}
+              repo={"https://github.com/windneverstops/windneverstops.github.io"}
             />
             <ProjectContent
               image={exportPhotos.project2}
@@ -106,6 +108,9 @@ export default function Home() {
                   and start planning my goals immediately.`, "Note:", "This website, after launching is missing a key feature: order of categories is not saved. This is something I'll be fixing soon."
               ]}
               title={"A minimalist kanban board which utilises local storage to persist data."}
+              link={"https://simplistic-kanban.vercel.app/"}
+              
+              repo={"https://github.com/windneverstops/simplistic-to-do"}
             />
             <ProjectContent
               image={exportPhotos.project3}
@@ -117,6 +122,8 @@ export default function Home() {
                   discord was that it was very easy to have information displaced everywhere, in between chats and memes. This lead to issues
                   where multiple people would ask similar questions which could have been answered by scrolling up. This bot was created to address that problem.`, 'Note:', "This project has been put on hold due to Azure credits running out and the Google Cloud free trial running out."]}
               title={"A discord bot which manages meet ups."}
+              repo={"https://github.com/windneverstops/meetUpBotv2"}
+              
             />
             <ProjectContent
               image={exportPhotos.project4}
@@ -131,6 +138,7 @@ export default function Home() {
                   `
               ]}
               title={"A chrome extension for theage.com.au which lets you view articles for free."}
+              repo={"https://github.com/windneverstops/theage-extension"}
             />
             <ProjectContent
               image={exportPhotos.project5}
@@ -147,6 +155,7 @@ export default function Home() {
                   `
               ]}
               title={"Commute Ease, our submission to Unihack 2023."}
+              repo={"https://github.com/YameiSong/UnihackApp"}
             />
             <ProjectContent
               image={exportPhotos.project6}
@@ -159,6 +168,7 @@ export default function Home() {
                 `
               ]}
               title={"User management interface for FIT1056 - 'Collaborative Engineering for Web Applications'."}
+              repo={"https://github.com/windneverstops/User-Management-front-end-interface"}
             />
 
           </div>
@@ -174,7 +184,7 @@ export default function Home() {
               content={["Collaborated with and mentored 10+ students to achieve desired academic outcome.",
                 "Analysed skills of students to produce individualized lessons, adapting to different needs of students.",
                 "Assisted 100% of the students to successfully achieve academic goals."]} />
-            <ExperienceContent positionName={"Sponsorship Officer"} company={"Wired Monash"} dates={"Sep 2022 - Present"}
+            <ExperienceContent positionName={"Sponsorship Officer"} company={"Wired Monash"} dates={"Sep 2022 - Feb 2024"}
               content={["Liaised with industry representatives, in both a written and verbal format, demonstrating strong verbal communication skills.",
                 "Built 5 industry relationships with the club.",
                 "Cultivated the relationship with Wired’s largest sponsor for 2023, KPMG.",

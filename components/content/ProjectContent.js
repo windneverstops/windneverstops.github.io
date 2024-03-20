@@ -13,8 +13,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import LinksForProject from "../LinkToProject"
 
-const ProjectContent = ({ image, width, height, alt, content, pills, title }) => {
+const ProjectContent = ({ image, width, height, alt, content, pills, title, link = null, repo = null}) => {
   const frameRef = useRef(null)
   const contentRefForAnimations = useRef(null)
   const contentRef = useRef(null)
@@ -39,13 +40,14 @@ const ProjectContent = ({ image, width, height, alt, content, pills, title }) =>
       </div>
       
       <div className="flex flex-row py-4 flex-wrap gap-2" ref={pillRef}>
+        <LinksForProject link = {link} repo = {repo}/>
         {
           pills.map((pill, value) => {
             const style={
               opacity: pillIsInView ? 1 : 0,
               transition: `all 2s cubic-bezier(0.17, 0.55, 0.55, 1) ${0.4 + value*0.15}s`,
               color:"white",
-              backgroundColor: pillIsInView ? "red": "blue"
+              backgroundColor: pillIsInView ? "#dc2626": "blue"
             }
             return (
               <React.Fragment key={value}>
@@ -90,6 +92,7 @@ const ProjectContent = ({ image, width, height, alt, content, pills, title }) =>
                 )
               })
             }
+            
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
