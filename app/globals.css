@@ -5,7 +5,7 @@
 
 
 .section-title{
-    @apply pt-10 pl-10 pr-10 text-4xl main-font-colour font-bold;
+    @apply pr-10 text-4xl main-font-colour font-bold;
 }
 
 .section-content{
