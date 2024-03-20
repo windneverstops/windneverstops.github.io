@@ -72,9 +72,9 @@ export default function Home() {
       <section>
         <AboutContent
           title={"About"}
-          content={[`I'm a penultimate software engineering student at Monash University. I'm interested in all things tech, primarily front-end. I'd also love to learn back-end, cloud, dev-ops and AI/ML.
+          content={[`I'm a penultimate software engineering student at Monash University. I'm interested in all things software engineering - front-end, back-end, cloud, dev-ops and AI/ML.
           I also do enjoy consulting with clients and coming up with effective and tailored solutions - I find it satisfying and rewarding when you're able to connect with a client and sell a story well.
-          I'm looking for opportunities where I can learn new things in an environment that supports life-long learners.`, `In my spare time, I like to collect watches (I currently own an Orient Bambino open heart), play fingerstyle guitar, hike in the Victorian outback, gym, consume anything of the sci-fi genre, and solve challenging leetcode questions.`]}
+          I'm looking for opportunities where I can learn new things in an environment that supports life-long learners.`, `In my spare time, I like to collect watches (I currently own an Orient Bambino open heart), play fingerstyle guitar, hike in the Victorian outback, gym, consume anything of the sci-fi genre (I recommend the Foundation Apple TV show - best piece of sci-fi media out there), and solve challenging leetcode questions.`]}
         />
       </section>
       <section>
@@ -204,7 +204,7 @@ export default function Home() {
       <footer>
         <div className="w-full flex justify-center p-4">
           <p>
-            Created by Daniel Hong using next.js and tailwind.css
+            Created by Daniel Hong using next.js and tailwind.css with shadcn and framer motion.
           </p>
         </div>
       </footer>
