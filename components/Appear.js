@@ -7,7 +7,7 @@ const Appear = ({children, delay = 0, duration = 0.5}) => {
     
     return (
         <div  ref = {appearRef} className="grid grid-rows-1 grid-cols-1 relative">
-            <div className="z-1 row-start-1 col-start-1"
+            <div className="row-start-1 col-start-1"
                 style={{
                     transform: ifElementIsInView ? "none" : "translateY(15px)",
                     opacity: ifElementIsInView ? 1 : 0,
@@ -16,7 +16,7 @@ const Appear = ({children, delay = 0, duration = 0.5}) => {
             >
                 {children}
             </div>
-            <motion.div className="z-0 h-full w-full row-start-1 col-start-1 bg-red-600"
+            <motion.div className="h-full w-full row-start-1 col-start-1 bg-red-600"
                 style={{
                     scaleX: ifElementIsInView ? 0 : 1,
                     transformOrigin: 'right',

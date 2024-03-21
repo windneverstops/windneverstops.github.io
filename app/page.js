@@ -2,17 +2,16 @@
 
 import Nav from "@/components/Nav";
 import { Asap } from "next/font/google";
-import Message from "@/components/Message";
 import MovingShadow from "@/components/MovingShadow";
 import Appear from "@/components/Appear";
-
 import exportPhotos from "@/public/static/exportPhotos";
-
 import ScrollJumper from "@/components/ScrollJumper";
 import ProjectContent from "@/components/content/ProjectContent";
 import AboutContent from "@/components/content/AboutContent";
 import ExperienceContent from "@/components/content/ExperienceContent";
 import { pillType } from "@/scripts/pillManager";
+import { useRef, useEffect } from "react";
+
 
 const mainFont = Asap({
   subsets: ["latin"],
@@ -20,20 +19,35 @@ const mainFont = Asap({
 
 
 export default function Home() {
+  const aboutRef = useRef(null);
+  const projectRef = useRef(null);
+  const experienceRef = useRef(null);
+  const homeRef = useRef(null);
+
+  useEffect(() => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+  
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+  });
+  })
 
   return (
-    <main className={`h-screen mx-auto max-w-screen-xl ${mainFont.className}`} style={{}}>
-      <div style={{}} className="relative flex flex-col h-screen p-12">
-        <Nav />
-        <div className="grow flex flex-col justify-around w-full h-auto">
+    <main className={`h-screen mx-auto max-w-screen-xl ${mainFont.className}`}>
+      <section ref = {homeRef} id="home" className={`relative flex flex-col h-screen p-12`} >
+        <Nav projectRef={projectRef} experienceRef={experienceRef} aboutRef={aboutRef} homeRef={homeRef}/>
+        <div className="relative grow flex flex-col justify-around items-center w-full h-auto" >
           <div className="flex flex-col gap-y-4 items-center pt-14">
             <div className="text-3xl font-bold">
               <Appear>
                 G&apos;day, I&apos;m
               </Appear>
-
             </div>
-            <span className="main-font-colour pl-7 text-5xl font-bold overflow-visible text-nowrap">
+            <span className="main-font-colour text-5xl font-bold overflow-visible text-nowrap">
               <Appear delay={0.1}>
                 Daniel Hong.
               </Appear>
@@ -41,11 +55,6 @@ export default function Home() {
             <div className="pt-10 text-wrap text-xl">
               <Appear delay={0.2}>
                 I&apos;m a <u className="decoration-sky-600">penultimate Software Engineering student</u> at a GO8 uni.
-              </Appear>
-            </div>
-            <div className="text-sm">
-              <Appear delay={0.3}>
-                To experience all the cool animations, please use a computer.
               </Appear>
             </div>
           </div>
@@ -68,8 +77,8 @@ export default function Home() {
           </div>
 
         </div>
-      </div>
-      <section>
+      </section>
+      <section ref = {aboutRef} id="about">
         <AboutContent
           title={"About"}
           content={[`I'm a penultimate software engineering student at Monash University. I'm interested in all things software engineering - front-end, back-end, cloud, dev-ops and AI/ML.
@@ -77,8 +86,8 @@ export default function Home() {
           I'm looking for opportunities where I can learn new things in an environment that supports life-long learners.`, `In my spare time, I like to collect watches (I currently own an Orient Bambino open heart), play fingerstyle guitar, hike in the Victorian outback, gym, consume anything of the sci-fi genre (I recommend the Foundation Apple TV show - best piece of sci-fi media out there), and solve challenging leetcode questions.`]}
         />
       </section>
-      <section>
-        <div className="section">
+      <section ref = {projectRef} id="projects">
+        <div className="section" id="projects">
           <div className="section-title">
             Projects
           </div>
@@ -173,7 +182,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
+      <section ref={experienceRef} id="experiences">
         <div className="section flex flex-col">
           <div className="section-title">
             Experiences
