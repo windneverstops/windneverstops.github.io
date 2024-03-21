@@ -10,7 +10,8 @@ import ProjectContent from "@/components/content/ProjectContent";
 import AboutContent from "@/components/content/AboutContent";
 import ExperienceContent from "@/components/content/ExperienceContent";
 import { pillType } from "@/scripts/pillManager";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
+
 
 
 const mainFont = Asap({
@@ -23,6 +24,7 @@ export default function Home() {
   const projectRef = useRef(null);
   const experienceRef = useRef(null);
   const homeRef = useRef(null);
+  const [resetAnimations, setResetAnimations]= useState(true);
 
   useEffect(() => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -39,21 +41,21 @@ export default function Home() {
   return (
     <main className={`h-screen mx-auto max-w-screen-xl ${mainFont.className}`}>
       <section ref = {homeRef} id="home" className={`relative flex flex-col h-screen p-12`} >
-        <Nav projectRef={projectRef} experienceRef={experienceRef} aboutRef={aboutRef} homeRef={homeRef}/>
+        <Nav projectRef={projectRef} experienceRef={experienceRef} aboutRef={aboutRef} homeRef={homeRef} setResetAnimations = {setResetAnimations} resetAnimations = {resetAnimations}/>
         <div className="relative grow flex flex-col justify-around items-center w-full h-auto" >
           <div className="flex flex-col gap-y-4 items-center pt-14">
             <div className="text-3xl font-bold">
-              <Appear>
+              <Appear resetAnimations = {resetAnimations}>
                 G&apos;day, I&apos;m
               </Appear>
             </div>
             <span className="main-font-colour text-5xl font-bold overflow-visible text-nowrap">
-              <Appear delay={0.1}>
+              <Appear delay={0.1} resetAnimations = {resetAnimations}>
                 Daniel Hong.
               </Appear>
             </span>
             <div className="pt-10 text-wrap text-xl">
-              <Appear delay={0.2}>
+              <Appear delay={0.2} resetAnimations = {resetAnimations}>
                 I&apos;m a <u className="decoration-sky-600">penultimate Software Engineering student</u> at a GO8 uni.
               </Appear>
             </div>
@@ -102,6 +104,7 @@ export default function Home() {
               title={"Portfolio Website showcasing my projects and experiences."}
               link={"https://www.danielhong.dev/"}
               repo={"https://github.com/windneverstops/windneverstops.github.io"}
+              resetAnimations = {resetAnimations}
             />
             <ProjectContent
               image={exportPhotos.project2}
@@ -119,7 +122,7 @@ export default function Home() {
               title={"A minimalist kanban board which utilises local storage to persist data."}
               repo={"https://github.com/windneverstops/simplistic-to-do"}
               link={"https://simplistic-kanban.vercel.app"}
-
+              resetAnimations = {resetAnimations}
             />
             <ProjectContent
               image={exportPhotos.project3}
@@ -132,6 +135,7 @@ export default function Home() {
                   where multiple people would ask similar questions which could have been answered by scrolling up. This bot was created to address that problem.`, 'Note:', "This project has been put on hold due to Azure credits running out and the Google Cloud free trial running out."]}
               title={"A discord bot which manages meet ups."}
               repo={"https://github.com/windneverstops/meetUpBotv2"}
+              resetAnimations = {resetAnimations}
             />
             <ProjectContent
               image={exportPhotos.project4}
@@ -147,6 +151,7 @@ export default function Home() {
               ]}
               title={"A chrome extension for theage.com.au which lets you view articles for free."}
               repo={"https://github.com/windneverstops/theage-extension"}
+              resetAnimations = {resetAnimations}
             />
             <ProjectContent
               image={exportPhotos.project5}
@@ -164,6 +169,7 @@ export default function Home() {
               ]}
               title={"Commute Ease, our submission to Unihack 2023."}
               repo={"https://github.com/YameiSong/UnihackApp"}
+              resetAnimations = {resetAnimations}
             />
             <ProjectContent
               image={exportPhotos.project6}
@@ -177,6 +183,7 @@ export default function Home() {
               ]}
               title={"User management interface for FIT1056 - 'Collaborative Engineering for Web Applications'."}
               repo={"https://github.com/windneverstops/User-Management-front-end-interface"}
+              resetAnimations = {resetAnimations}
            />
 
           </div>

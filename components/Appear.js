@@ -1,9 +1,9 @@
 import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
 
-const Appear = ({children, delay = 0, duration = 0.5}) => {
+const Appear = ({children, delay = 0, duration = 0.5, resetAnimations}) => {
     const appearRef = useRef(null);
-    const ifElementIsInView = useInView(appearRef, {once: true})
+    const ifElementIsInView = useInView(appearRef, {once: resetAnimations})
     
     return (
         <div  ref = {appearRef} className="grid grid-rows-1 grid-cols-1 relative">

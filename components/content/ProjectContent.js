@@ -15,15 +15,15 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 
-const ProjectContent = ({ image, width, height, alt, content, pills, title, link, repo }) => {
+const ProjectContent = ({ image, width, height, alt, content, pills, title, link, repo, resetAnimations }) => {
   const frameRef = useRef(null)
   const contentRefForAnimations = useRef(null)
   const contentRef = useRef(null)
   const pillRef = useRef(null)
   const modalTriggerRef = useRef(null)
-  const frameIsInView = useInView(frameRef, { once: true })
-  const pillIsInView = useInView(pillRef, {once: true})
-  const contentIsInView = useInView(contentRefForAnimations, { once: true })
+  const frameIsInView = useInView(frameRef, { once: resetAnimations })
+  const pillIsInView = useInView(pillRef, {once: resetAnimations})
+  const contentIsInView = useInView(contentRefForAnimations, { once: resetAnimations })
 
   const handleModalTrigger = () => {
     modalTriggerRef.current.click()
@@ -40,7 +40,7 @@ const ProjectContent = ({ image, width, height, alt, content, pills, title, link
       </div>
       <div className="grow"></div>
       <div className="flex flex-row py-4 flex-wrap gap-2" ref={pillRef}>
-        <LinksForProject link = {link} repo = {repo}/>
+        <LinksForProject link = {link} repo = {repo} resetAnimations={resetAnimations}/>
         {
           pills.map((pill, value) => {
             const style={
