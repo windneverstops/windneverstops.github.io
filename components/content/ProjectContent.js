@@ -47,7 +47,7 @@ const ProjectContent = ({ image, width, height, alt, content, pills, title, link
               opacity: pillIsInView ? 1 : 0,
               transition: `all 2s cubic-bezier(0.17, 0.55, 0.55, 1) ${0.4 + value*0.15}s`,
               color:"white",
-              backgroundColor: pillIsInView ? "red": "blue"
+              backgroundColor: pillIsInView ? "#dc2626": "#0284c7"
             }
             return (
               <React.Fragment key={value}>
