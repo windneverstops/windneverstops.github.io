@@ -1,7 +1,6 @@
 "use client";
 
 import Nav from "@/components/Nav";
-import { Asap } from "next/font/google";
 import MovingShadow from "@/components/MovingShadow";
 import Appear from "@/components/Appear";
 import exportPhotos from "@/public/static/exportPhotos";
@@ -13,10 +12,6 @@ import { pillType } from "@/scripts/pillManager";
 import { useRef, useEffect, useState } from "react";
 
 
-
-const mainFont = Asap({
-  subsets: ["latin"],
-})
 
 
 export default function Home() {
@@ -39,7 +34,7 @@ export default function Home() {
   })
 
   return (
-    <main className={`h-screen mx-auto max-w-screen-xl ${mainFont.className}`}>
+    <main className= 'h-screen mx-auto max-w-screen-xl'>
       <section ref = {homeRef} id="home" className={`relative flex flex-col h-screen p-12`} >
         <Nav projectRef={projectRef} experienceRef={experienceRef} aboutRef={aboutRef} homeRef={homeRef} setResetAnimations = {setResetAnimations} resetAnimations = {resetAnimations}/>
         <div className="relative grow flex flex-col justify-around items-center w-full h-auto" >

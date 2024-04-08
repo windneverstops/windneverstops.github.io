@@ -13,9 +13,9 @@ const Nav = ({ aboutRef, projectRef, experienceRef, homeRef, setResetAnimations,
 
 		const previous = scrollY.getPrevious();
 		if (latest > previous && latest > 100) {
-			setTimeout(() => {
-				setIsHidden(true);
-			}, 750);
+			
+			setIsHidden(true);
+			
 		} else {
 
 			setIsHidden(false);
