@@ -55,7 +55,7 @@ export default function Home() {
                 I&apos;m a <u className="decoration-sky-600">penultimate Software Engineering student</u> at a GO8 uni.
                 </p>
                 <p>
-                  I'm also a Software Engineering Intern at Uptick.
+                  I&apos;m also a Software Engineering Intern at Uptick.
                 </p>
                 
                 
