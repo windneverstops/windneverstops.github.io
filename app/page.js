@@ -51,7 +51,14 @@ export default function Home() {
             </span>
             <div className="pt-10 text-wrap text-xl">
               <Appear delay={0.2} resetAnimations = {resetAnimations}>
+                <p>
                 I&apos;m a <u className="decoration-sky-600">penultimate Software Engineering student</u> at a GO8 uni.
+                </p>
+                <p>
+                  I'm also a Software Engineering Intern at Uptick.
+                </p>
+                
+                
               </Appear>
             </div>
           </div>
@@ -190,6 +197,8 @@ export default function Home() {
             Experiences
           </div>
           <div className="section-content pt-4">
+          <ExperienceContent positionName={"Software Engineering Intern"} company={"Uptick"} dates={"May 2024 - Present"}
+              content={["Working with React and Django to develop enterprise applications for clients."]} />
             <ExperienceContent positionName={"VCE Math Tutor"} company={"Double Check Tutoring and Daniel Hong Tutoring Services"} dates={"Dec 2020 - Present"}
               content={["Collaborated with and mentored 10+ students to achieve desired academic outcome.",
                 "Analysed skills of students to produce individualized lessons, adapting to different needs of students.",
